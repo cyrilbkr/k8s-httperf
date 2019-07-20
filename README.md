@@ -20,13 +20,7 @@ Httperf is working with 4  options :
 
 ### Kubernetes job 
 
-Download the example file and rename it : 
-
-````
-$ wget https://raw.githubusercontent.com/cyrilbkr/k8s-httperf/master/kubernetes-job-example.yaml 
-````
-
-Edit the file and set server, uri, num-conns and rate 
+Download the example file  and set server, uri, num-conns and rate 
 
 ````
 apiVersion: batch/v1
