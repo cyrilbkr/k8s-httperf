@@ -12,7 +12,21 @@ This reposity include the configuration to setup an Http Load Generator using Ku
 
 ## Usage
 
+Httperf is working with 4  options : 
+* --server :
+* --uri : 
+* --num-conns : 
+* --rate : 
+
 ### Kubernetes job 
+
+Download the example file and rename it : 
+
+````
+$ wget https://raw.githubusercontent.com/cyrilbkr/k8s-httperf/master/kubernetes-job-example.yaml 
+````
+
+Edit the file and set server, uri, num-conns and rate 
 
 ````
 apiVersion: batch/v1
@@ -41,6 +55,7 @@ spec:
           allowPrivilegeEscalation: true
       restartPolicy: Never
 ````
+
 
 ## Docker Image
 
