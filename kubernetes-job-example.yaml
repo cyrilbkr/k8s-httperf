@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: httperf-bench
+spec:
+  parallelism: 10
+  template:
+    spec:
+      containers:
+      - name: httperf-bench
+        image: cyrilbkr/httperf
+        args:
+        - /bin/sh
+        - -c
+        - httperf --server mytestserver.com --uri="/" --port 443  --num-conns 1000000 --rate 100  --timeout 1 --ssl
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "1"
+          limits:
+            memory: "2Gi"
+            cpu: "2"
+        securityContext:
+          allowPrivilegeEscalation: true
+      restartPolicy: Never
