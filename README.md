@@ -2,7 +2,7 @@
 
 ## Description 
 
-This reposity include the configuration to setup an Http Load Generator using Kubernetes orchestration and Httperf as main stress tool. 
+This repository include the configuration to setup an Http Load Generator using Kubernetes orchestration and Httperf as main stress tool. 
 
 
 ## Requirement 
@@ -13,10 +13,10 @@ This reposity include the configuration to setup an Http Load Generator using Ku
 ## Usage
 
 Httperf is working with 4  options : 
-* --server :
-* --uri : 
-* --num-conns : 
-* --rate : 
+* --server : taget ip or dns name
+* --uri : url 
+* --num-conns : total connections  
+* --rate : connections rate
 
 ### Kubernetes job 
 
