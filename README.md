@@ -16,7 +16,7 @@ Httperf is working with 4  options :
 * --server : taget ip or dns name
 * --uri : url 
 * --num-conns : total connections  
-* --rate : connections rate
+* --ra : connection per second
 
 ### Kubernetes job 
 
@@ -37,7 +37,7 @@ spec:
         args:
         - /bin/sh
         - -c
-        - httperf --server mytestserver.com --uri="/" --port 443  --num-conns 1000000 --rate 100  --timeout 1 --ssl
+        - httperf --server mytestserver.com --uri="/" --port 443  --num-conns 1000000 --ra 100  --timeout 1 --ssl
         resources:
           requests:
             memory: "64Mi"
